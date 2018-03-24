@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Instaling Anaconda -- Tshilidzi's blog</title>
+        
+        <link rel="stylesheet" href="../../fonts/Serif/cmun-serif.css" />
+        <link rel="stylesheet" href="../../fonts/Serif-Slanted/cmun-serif-slanted.css" />
+
+        <!--BOOTSTRAP-->
+        <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!--mobile first-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--removed html from url but still is html-->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <!--font awesome-->
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+        <!--fonts: allan & cardo-->
+        <link href="http://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css">
+
+        <link href="../../css/sticky-footer-navbar.css" rel="stylesheet">
+
+        <link href="../../css/default.css" rel="stylesheet">
+
+        <link href="../../comments/inlineDisqussions.css" rel="stylesheet">
+
+        <!--Highlight-->
+        <link href="../../highlight/styles/github.css" rel="stylesheet">
+        
+        <link href="../../favicon.ico" rel="shortcut icon" />
+
+        <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <!-- start Mixpanel --><script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+        for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
+        mixpanel.init("dc1ac55f121e696b2f8d54d338ec642c");</script><!-- end Mixpanel -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49811703-1', 'tshili-m.github.io');
+  ga('require', 'linkid', 'linkid.js');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+    </head>
+
+    <body>
+        <div id="wrap">
+            <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+                <div class="container">
+                    <!--Toggle header for mobile-->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand active" href="../../" style="font-size:20px;">Tshilidzi's blog</a>
+                    </div>
+                    <!--normal header-->
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="../../index.html"><span class="glyphicon glyphicon-pencil"></span>  Blog</a></li>
+                            <li><a href="../../resources.html"><span class="glyphicon glyphicon-random"></span>  Resources</a></li>
+                            <li><a href="../../about.html"><span class="glyphicon glyphicon-user"></span>  About</a></li>
+                            <li><a href="../../contact.html"><span class="glyphicon glyphicon-envelope"></span>  Contact</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </nav>
+
+            
+            <div id="content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h1>Get The Most Of Jupyter Notebook As A Data Scientist</h1>
+                            <div class="info">
+    <p style="font-family:CMSS; font-size:120%">Posted on March  17, 2018</p>
+    Python, Data science, Jupyter notebook, Ipython, Tips, Cheat sheat
+    
+        - by <a href="../../about.html">Tshilidzi Mudau</a>
+</div>
+</br>
+
+
+<p><a href="http://www.ipython.org/">Jupyter notebook</a> is a popular tool amongst data scientist<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>. Many blog posts have been written about the benefits of using Jupyter notebook as a data scientist for this very reason, I won't spend time explaining the benefits of using Jupyter notebooks as a data scientist. Instead, in this post I will focus on how as a data scientist you can make better use of Jupyter notebook. The reason that motivated me to write this post is that what I have seen is that many Jupyter notebook users, are not using it to its full potential, as a result they are missing out on most of its capabilities and benefits. It is to such users that this blog post is aimed at. </p> 
+
+
+
+<h2 id="introduction">Keyboard Input Modes</h2>
+<p>Jupyter, just like Vim (Cite vim) has different keyboard input modes. Depending on the mode you are in, you can only perform certain operations/actions.</p>
+<div class="spaceafterimg">
+
+
+
+</div>
+<h2 id="acknowledgments">Edit Mode</h2>
+<p>The Edit mode allows you to type code/text into a cell and is indicated by a green cell border. To go into Edit mode, press <kbd>Enter</kbd>. The edit mode pretty much has nothing cool other than that it is a mode in which you can type text into cells (unfortunately, for most users, this is where their usage of jupyter notebook ends). Below we present some of the most useful actions that are useful when in Edit Mode: </p>
+
+
+<ol>
+<li><p><a></a>Tab completion: - press <kbd>Tab</kbd> after typing the few begining characters of the function/command or module you want to type. Eg I want to call the <code>print</code> function, so I type <code>pri</code> and press <kbd>Tab</kbd> and Jupyter notebook will fill complete the word for you. This doesn't work only for built-in python function and modules but for pretty much any valid command in Jupyter(including the stuff you defined/wrote yourself).</p></li>
+
+<li><p><a></a>Indentation: - Use <kbd>Ctrl</kbd> + <kbd>]</kbd> and <kbd>Ctrl</kbd> + <kbd>[</kbd> for right indentation and left indentaion respectively instead of using your mouse or moving the cursor to the begining of the line and then pressing tab or repeated <kbd>Space</kbd> key presses.</p></li>
+
+
+<li><p><a></a>Indentation: - Use <kbd>Ctrl</kbd> + <kbd>]</kbd> for right indentation instead of using your mouse or moving the cursor to the begining of the line and then pressing tab or repeated <kbd>Space</kbd> key presses. Similarly, use </p></li>
+</ol>
+
+
+<div class="spaceafterimg">
+
+
+
+</div>
+
+
+
+<p><em>(This is by no means a complete discussion of the things one has to do know about Jupyter notebook. If one wants more information, I would suggest you consult its docs which can be found here.</a>.)</em></p>
+
+<h2 id="acknowledgments">Acknowledgments</h2>
+<p>Thank you to Yoshua Bengio, Michael Nielsen, Dario Amodei, Eliana Lorch, Jacob Steinhardt, and Tamsyn Waterhouse for their comments and encouragement.</p>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Cite Jupyter Notebook.<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>These representations, hopefully, make the data “nicer” for the network to classify. There has been a lot of work exploring representations recently. Perhaps the most fascinating has been in Natural Language Processing: the representations we learn of words, called word embeddings, have interesting properties. See <a href="http://research.microsoft.com/pubs/189726/rvecs.pdf">Mikolov <em>et al.</em> (2013)</a>, <a href="http://www.iro.umontreal.ca/~lisa/pointeurs/turian-wordrepresentations-acl10.pdf">Turian <em>et al.</em> (2010)</a>, and, <a href="http://www.socher.org/">Richard Socher’s work</a>. To give you a quick flavor, there is a <a href="http://metaoptimize.s3.amazonaws.com/cw-embeddings-ACL2010/embeddings-mostcommon.EMBEDDING_SIZE=50.png">very nice visualization</a> associated with the Turian paper.<a href="#fnref2">↩</a></p></li>
+<li id="fn3"><p>A lot of the natural transformations you might want to perform on an image, like translating or scaling an object in it, or changing the lighting, would form continuous curves in image space if you performed them continuously.<a href="#fnref3">↩</a></p></li>
+<li id="fn4"><p><a href="http://comptop.stanford.edu/u/preprints/mumford.pdf">Carlsson <em>et al.</em></a> found that local patches of images form a klein bottle.<a href="#fnref4">↩</a></p></li>
+<li id="fn5"><p><span class="math">\(GL_n(\mathbb{R})\)</span> is the set of invertible <span class="math">\(n \times n\)</span> matrices on the reals, formally called the <a href="http://en.wikipedia.org/wiki/General_linear_group">general linear group</a> of degree <span class="math">\(n\)</span>.<a href="#fnref5">↩</a></p></li>
+<li id="fn6"><p>This result is mentioned in <a href="http://en.wikipedia.org/wiki/Whitney_embedding_theorem#Isotopy_versions">Wikipedia’s subsection on Isotopy versions</a>.<a href="#fnref6">↩</a></p></li>
+<li id="fn7"><p>See <a href="http://cs.nyu.edu/~zaremba/docs/understanding.pdf">Szegedy <em>et al.</em></a>, where they are able to modify data samples and find slight modifications that cause some of the best image classification neural networks to misclasify the data. It’s quite troubling.<a href="#fnref7">↩</a></p></li>
+<li id="fn8"><p>Contractive penalties were introduced in contractive autoencoders. See <a href="http://www.iro.umontreal.ca/~lisa/pointeurs/ICML2011_explicit_invariance.pdf">Rifai <em>et al.</em> (2011)</a>.<a href="#fnref8">↩</a></p></li>
+<li id="fn9"><p>I used a slightly less elegant, but roughly equivalent algorithm because it was more practical to implement in Theano: feedforward two different batches at the same time, and classify them based on each other.<a href="#fnref9">↩</a></p></li>
+</ol>
+</section>
+
+<div id="disqus_thread"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+<script src="../../comments/inlineDisqussions.js"></script>
+<script src="../../js/disqus.js"></script>
+
+                        </div>
+                        <div class="col-md-4"></div>
+                    </div>
+                </div>
+            </div>
+        
+
+            <div id="footer">
+                <div class="container">
+                    Built by <a href="https://github.com/oinkina">Oinkina</a> with
+                    <a href="http://jaspervdj.be/hakyll">Hakyll</a> 
+                    using <a href="http://getbootstrap.com/">Bootstrap</a>, 
+                    <a href="http://www.mathjax.org/">MathJax</a>,
+                    <a href="http://disqus.com/">Disqus</a>,
+                    <a href="https://github.com/unconed/MathBox.js">MathBox.js</a>,
+                    <a href="http://highlightjs.org/">Highlight.js</a>, 
+                    and <a href="http://ignorethecode.net/blog/2010/04/20/footnotes/">Footnotes.js</a>.
+                </div>
+            </div>
+        </div>
+
+    <!-- jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+    <script src="../../bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="../../highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <script src="../../js/footnotes.js"></script>
+
+    <script src="../../comments/inlineDisqussions.js"></script>
+    
+    <noscript>Enable JavaScript for footnotes, Disqus comments, and other cool stuff.</noscript>
+
+    </body>
+
+</html>
